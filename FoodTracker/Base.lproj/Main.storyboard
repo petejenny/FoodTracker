@@ -47,7 +47,7 @@
                                     <outlet property="nameLabel" destination="0OL-pq-g0x" id="CPb-3Q-PDx"/>
                                     <outlet property="photoImageView" destination="nlR-va-Ymh" id="pIk-sq-jbO"/>
                                     <outlet property="ratingControl" destination="X31-ts-ILp" id="L5m-3S-REK"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" trigger="accessoryAction" id="iIx-If-4Vx"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="EDS-TF-5mQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,7 +72,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -122,7 +122,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="ZPy-q3-RSZ">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0mr-l9-7av"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0mr-l9-7av">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="tSi-qD-9A4"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="fGc-Jz-Lup">
                             <connections>
                                 <action selector="saveButton:" destination="LEo-71-viL" id="SmY-eI-z5c"/>
@@ -188,6 +192,6 @@
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iIx-If-4Vx"/>
+        <segue reference="EDS-TF-5mQ"/>
     </inferredMetricsTieBreakers>
 </document>
